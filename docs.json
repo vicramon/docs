@@ -7,6 +7,11 @@
     "light": "#14BCFF",
     "dark": "#14BCFF"
   },
+  "background":  {
+    "color": {
+      "dark": "#212427"
+    }
+  },
   "favicon": "/favicon.png",
   "navigation": {
       "groups": [
@@ -54,13 +59,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@lazerdata.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Back to Lazer",
+      "href": "https://lazerdata.ai"
     }
   },
   "contextual": {
@@ -77,9 +82,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/lazerdata",
+      "linkedin": "https://www.linkedin.com/company/lazer-ai/"
     }
   }
 }

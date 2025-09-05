@@ -9,47 +9,8 @@
   },
   "background":  {
     "color": {
-      "dark": "#212427"
+      "dark": "#1E2023"
     }
-  },
-  "favicon": "/favicon.png",
-  "navigation": {
-      "groups": [
-        {
-          "group": "Data Source Guides",
-          "icon": "database",
-          "pages": [
-            "databases/supabase",
-            "databases/postgres"
-          ]
-        },
-        {
-          "group": "Codebase Guides",
-          "icon": "cube",
-          "pages": [
-            "codebases/github"
-          ]
-        }
-      ]
-  },
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
   },
   "logo": {
     "light": "/logo/dark.png",
@@ -68,22 +29,39 @@
       "href": "https://lazerdata.ai"
     }
   },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-    ]
-  },
+  "favicon": "/favicon.png",
   "footer": {
     "socials": {
       "x": "https://x.com/lazerdata",
       "linkedin": "https://www.linkedin.com/company/lazer-ai/"
     }
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Docs Home",
+          "href": "https://docs.lazerdata.ai",
+          "icon": "house"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "group": "Data Source Guides",
+        "icon": "database",
+        "pages": [
+          "databases/supabase",
+          "databases/postgres"
+        ]
+      },
+      {
+        "group": "Codebase Guides",
+        "icon": "cube",
+        "pages": [
+          "codebases/github"
+        ]
+      }
+    ]
   }
 }

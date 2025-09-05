@@ -37,16 +37,12 @@
     }
   },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Docs Home",
-          "href": "https://docs.lazerdata.ai",
-          "icon": "house"
-        }
-      ]
-    },
     "groups": [
+      {
+        "group": "Docs Home",
+        "icon": "house",
+        "pages": ["index"]
+      },
       {
         "group": "Data Source Guides",
         "icon": "database",

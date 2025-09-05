@@ -11,14 +11,16 @@
   "navigation": {
       "groups": [
         {
-          "group": "Connecting Data Sources",
+          "group": "Data Source Guides",
+          "icon": "database",
           "pages": [
             "databases/supabase",
             "databases/postgres"
           ]
         },
         {
-          "group": "Connecting Codebases",
+          "group": "Codebase Guides",
+          "icon": "cube",
           "pages": [
             "codebases/github"
           ]

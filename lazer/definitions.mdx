@@ -1,0 +1,48 @@
+---
+title: "Custom Definitions"
+icon: book
+---
+
+## Overview
+
+The Custom Definitions feature allows you to add custom instructions to the AI. The extra instructions will be injected into every request to the AI.
+
+This is useful for a several reasons.
+
+First, if you have shared terminology within your company, you can add it in so that it's always available, and so that everyone is operating on the same definitions.
+
+Second, if you notice the AI using the wrong field for a given request, you can correct it so it uses the right field.
+
+Third, if there's additional domain knowledge that's not present in your Codebase or Database Schema, this is where you can add it.
+
+## How to Use It
+
+1. Go to AI Settings > [Definitions](https://lazerdata.ai/definitions)
+2. Click "New Definition"
+3. Select the Data source this definition applies to
+4. Give it a name. This is for internal reference only.
+5. Write the custom definition / instructions
+
+## Examples
+
+Here are a few examples of custom definitions you could add:
+
+#### Add internal terminology
+
+```md
+A 'good rating' is when `feedbacks.score` is greater than 3
+```
+
+#### Correct the AI
+
+```md wrap
+When a user asks for a "completed order", use `orders.completed_at`, don't use `orders.completed_status` – that field is deprecated.
+```
+
+#### Add additional domain knowledge
+
+```md wrap
+The `orders.order_status` field is an enum. Here's what the numbers mean:
+1 - canceled order
+2 - completed order
+3 - in progress order

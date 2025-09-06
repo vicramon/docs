@@ -44,6 +44,11 @@
         "pages": ["index"]
       },
       {
+        "group": "Using Lazer",
+        "icon": "chart-line-up",
+        "pages": ["lazer/definitions"]
+      },
+      {
         "group": "Data Source Guides",
         "icon": "database",
         "pages": [

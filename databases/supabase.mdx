@@ -3,5 +3,58 @@ title: 'Connect Supabase'
 icon: 'bolt'
 ---
 
+Supabase works great with Lazer and it's easy to connect. Simply follow these steps.
 
-Hello world
+## Step 1: Create a read-only user
+
+While you can use your existing user, creating a new read-only user enhances security.
+
+Go to your Supabase project and open the SQL Editor.
+
+Copy and paste this code in, making sure to replace `YOUR_PASSWORD` with a secure password.
+
+```sql lines
+BEGIN;
+CREATE USER lazer WITH PASSWORD 'YOUR_PASSWORD';
+GRANT CONNECT ON DATABASE postgres TO lazer;
+GRANT USAGE ON SCHEMA public TO lazer;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO lazer;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO lazer;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO lazer;
+ALTER ROLE "lazer" with bypassrls;
+COMMIT;
+```
+
+Click run (or press cmd+enter) to execute the SQL.
+
+## Step 2: Find connection info
+
+While in Supbase, click "Connect" at the top to view your connection info.
+
+Scroll down to "Session pooler" and click "View parameters".
+
+<info>You must use the Session pooler connection at the bottom, the Direct connection will not work</info>
+
+## Step 3: Add connection info to Lazer
+
+In Lazer, go to AI Settings > [Data Sources](https://lazerdata.ai/data_sources), and click "New Data Source"
+
+Fill in the connection info from Supabase.
+
+**However, use your new read-only user:**
+
+Supbase's Sessions pooler parameters will say the user is: "postgres.\<string\>". 
+
+Swap "postgres" with "lazer", but keep the ".\<string\>".
+
+ So the user in Lazer will be: "lazer.\<string\>"
+
+## Step 4: Test Connection
+
+Click "Create Data source", then click "Test Connection" to ensure it's working properly.
+
+## Step 5: Sync Schema
+
+Go back to the Data Sources index, and click "Sync Now" on your new connection. This imports your schema into Lazer so the AI can use it.
+
+That's it, you're all setup!

@@ -1,14 +1,6 @@
-# Mintlify Starter Kit
+# Lazer Docs Readme
 
-Use the starter kit to get your docs deployed and ready to customize.
-
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
-
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+Using Mintlify
 
 **[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
 
@@ -23,16 +15,14 @@ npm i -g mint
 Run the following command at the root of your documentation, where your `docs.json` is located:
 
 ```
-mint dev
+mint dev --port 4000
 ```
 
-View your local preview at `http://localhost:3000`.
+View your local preview at `http://localhost:4000`.
 
 ## Publishing changes
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
+Simply push to GitHub
 
 ### Troubleshooting
 
